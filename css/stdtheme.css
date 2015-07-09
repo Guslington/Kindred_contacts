@@ -1,0 +1,371 @@
+/*==============================
+Kindred Studios contact web application
+Standard theme CSS
+
+Author: Angus Vine
+Last Updated: 14/09/2014
+==============================*/
+
+@charset "UTF-8";
+
+/*========
+		Fonts
+=========*/
+
+@font-face {
+	font-family: opensans;
+	font-weight: normal;
+    font-style: normal;
+	src: url('fonts/OpenSans-Regular.ttf');
+}
+
+/*Reset tags*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, li, ul,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+a {text-decoration: none; color: #1C1717;}
+a:hover {color: #DB5151;}
+
+body {
+	width: 100%;
+	height: 100%;
+	background: #1C1717;
+	font-size: 1em;
+}
+
+body, input, select, option {
+	font-family: opensans, arial;
+	color:#1C1717;
+}
+
+.mainContainer {
+	margin: 20px auto;
+	width: 100%;
+	max-width: 900px;
+	min-width: 900px;
+	overflow: hidden;
+}
+
+/*==========
+		Header
+===========*/
+
+.headerContainer {
+	padding: 10px 0 10px 10px;
+	box-sizing: border-box;
+	color: #E7E7E7;
+	height: 65px;
+	position: relative; 
+}
+
+.header {
+	float: left;
+	position: absolute; 
+}
+
+.navigation {
+	padding: 0 0 0 15px;
+	box-sizing: border-box;
+	position: absolute; 
+    bottom: 0;
+	right: 0;
+}
+.navigation > a {
+	color: #E7E7E7;
+	margin-bottom: 15px;
+}
+.navigation > a:hover {
+	color: #DB5151;
+}
+
+/*=============
+		Sub Header
+=============*/
+
+.sub-headerContainer {
+	height: 40px;
+	border-bottom: 1px solid #1C1717;
+}
+
+.sub-header {
+	float: left;
+	margin-left: 5px;
+}
+
+.sub-navigation {
+	float: right;
+	margin-top: 10px;
+}
+.sub-navigation > span > a {color: #1C1717;}
+.sub-navigation > span > a:hover {color: #DB5151;}
+
+/*============
+		Search bar
+=============*/
+
+.searchContainer {
+	width: 100%;
+	height: 65px;
+	background: #E7E7E7;
+	border-radius: 2px;
+	padding: 15px 0 10px 15px;
+	box-sizing: border-box;
+	margin: 10px 0 0 0;
+}
+
+.search-field {
+	float: left;
+	margin-left: 30px;
+	width: 700px;
+	height: 35px;
+	text-indent: 10px;
+	background: #fff;
+	border: solid 1px #d9d9d9;
+	border-top: solid 1px #c0c0c0;
+	border-right: solid 1px #c0c0c0;
+	outline-color: #DB5151;
+	font-size: 1.1em;
+}
+
+.search-btn {
+	float: left;
+	cursor:pointer;
+	margin-left: 5px;
+	width:110px;
+	height: 35px;
+	color: transparent;
+	background: url(../img/ico-search-red.png) no-repeat #ffffff center;
+	background-size: 15px 15px;
+	border:solid 1px #d9d9d9;
+	border-top:solid 1px #c0c0c0;
+	border-right:solid 1px #c0c0c0;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+.search-btn:hover {
+	background: url(../img/ico-search-grey.png) no-repeat #ffffff center;
+	background-size: 15px 15px;
+	border: 1px solid #1C1717;
+}
+
+/*==============
+		Main Content
+===============*/
+
+.contentContainer {
+	width: 100%;
+	margin: 10px 0 0 0;
+	background: #E7E7E7;
+	padding: 15px 20px 50px 20px;
+	border-radius: 2px;
+	overflow: hidden;
+	box-sizing: border-box;
+	min-height: 520px;
+	position: relative;
+}
+
+/*===============
+		Search Results
+===============*/
+
+.resultsContainer {#position: relative; overflow: hidden; padding-top: 5px;}
+ul.ul-result{list-style-type: none;}
+.result {
+	border-bottom: dashed 1px rgb(28, 23, 23);
+	border-bottom: dashed 1px rgba(28, 23, 23, 0.5);
+	margin: 0 15px 0 10px;
+	padding: 10px 0 10px 5px;
+	overflow: auto;
+	box-sizing: border-box;
+	cursor: pointer;
+	overflow-x: hidden; 
+	white-space: nowrap;
+}
+.result:hover { color: #DB5151; }
+.result-stats {margin: 0 15px 0 10px; padding: 10px 0 10px 5px;}
+span.stats {}
+.result > div {display: inline-block; height: 25px; overflow-x: hidden; margin-right: 10px; box-sizing: border-box;}
+.name {width: 220px;}
+.email {width: 340px;}
+.phone {width: 120px;}
+.mobile {width: 130px;}
+.result > div > span {}
+.search-pages {
+	position: absolute;
+	bottom: 0; 
+	margin-bottom: 15px;
+	text-align:center;
+	width:100%;
+	display:table;
+}
+.search-pages  > span {
+	padding-right: 10px;
+}
+a.enable {}
+a.disable {
+	pointer-events: none;
+	cursor: default;
+}
+/*=========
+		form
+=========*/
+
+.formContainer {width: 430px; padding: 10px; box-sizing: border-box; float: left;}
+
+.field {display: list-item; list-style-type: none;}
+.inputLabel {
+	height: 20px; 
+	margin: 5px 0;
+	display: block;
+}
+
+.field > label > div >  input {
+	width: 250px;
+	height: 20px;
+	margin: 5px 0;
+	text-indent:3px;
+	border:solid 1px #d9d9d9;
+	border-top:solid 1px #c0c0c0;
+	border-right:solid 1px #c0c0c0;
+	outline-color: #DB5151;
+	font-size: .9em;
+}
+.field > label > div >  input {cursor: text;}
+.ta-label {
+	padding: 0 10px;
+}
+.ta-div {
+	width: 835px;
+	margin: 10px 10px 0 10px;
+}
+.ta-notes {
+	width: 100%;
+	height: 100px;
+	text-indent:3px;
+	border:solid 1px #d9d9d9;
+	border-top:solid 1px #c0c0c0;
+	border-right:solid 1px #c0c0c0;
+	outline-color: #DB5151;
+	font-size: .9em;
+	font-family: opensans, arial;
+	resize: none;
+}
+
+.input-group {
+	position: relative;
+	display: table;
+	border-collapse: separate;
+	box-sizing: border-box;
+}
+
+.input-group-btn {
+	background: #1C1717;
+	color: #E7E7E7;
+	position: relative;
+	padding: 5px 15px;
+	box-sizing: border-box;
+	opacity: 0.4;
+	cursor: pointer !important;
+}
+
+.input-group-btn:hover {
+	opacity: 0.8;
+	color: #DB5151;
+}
+
+.btn-file {
+	overflow: hidden;
+}
+.btn-file input[type=file] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	min-width: 100%;
+	min-height: 100%;
+	text-align: right;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	cursor: inherit;
+	display: block;
+}
+input[readonly].form-control {
+	background-color: white !important;
+	cursor: text !important;
+	width: 250px;
+	height: 29px;
+	margin: 5px 0;
+	text-indent:3px;
+	border:solid 1px #d9d9d9;
+	border-top:solid 1px #c0c0c0;
+	border-right:solid 1px #c0c0c0;
+	outline-color: #DB5151;
+	font-size: .9em;
+}
+
+select {
+	background-color: white !important;
+	cursor: text !important;
+	width: 253px;
+	height: 24px;
+	margin: 5px 0;
+	border:solid 1px #d9d9d9;
+	border-top:solid 1px #c0c0c0;
+	border-right:solid 1px #c0c0c0;
+	outline-color: #DB5151;
+	font-size: .9em;
+}
+
+.button-padding {width: 100%; height: 50px;}
+.field-submit {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 0 30px 30px 0;
+}
+.field-submit  > input {
+	border:solid 1px #d9d9d9;
+	background: #1C1717;
+	color: #E7E7E7;
+	opacity: 0.4;
+	cursor: pointer !important;
+	padding: 10px 25px;
+	font-size: 1.1em;
+	color: #E7E7E7;
+}
+
+.field-submit  > input:hover {
+	opacity: 0.8;
+	color: #DB5151;
+}
+
+/*===========
+		Common
+===========*/
+
+.floatLeft{float:left;}
+.floatRight{float:right;}
+.clear {clear: both;}
+
+/*============
+		Text styling
+============*/
+
+span.bold {font-weight: bold;}
+ul.error {padding: 10px 0 0 10px; list-style-type: none;}
+ul.error > li {color: #DB5151;}
+div.flash{padding: 10px 0 0 10px;}
